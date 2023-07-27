@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/cd8009d1ef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header navbar -->
+    <section class="about-header">
+        <nav>
+            <a href="index.html"><img src="logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+              <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="course.html">COURSE</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+              </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+          </nav> 
+
+        <h1>About Us</h1>
+
+    </section>
+
+    <!-- about us content -->
+    <section class="about-us">
+
+        <div class="about-row">
+            <div class="about-col">
+                <h2>About JR.Comp</h2>
+                <p>Lorem ipsum dolor sit amet. Et facere officia eos debitis minima sed consequuntur Quis. Ab quibusdam necessitatibus sit illo omnis et accusamus accusamus?
+
+                    Qui possimus fugit et facilis provident a similique dolore est voluptatem nihil et numquam quaerat aut dolore deserunt non voluptas ducimus? Eos assumenda optio et voluptatem assumenda sit nisi perferendis vel voluptas similique et adipisci eligendi. Et impedit numquam sit dicta possimus est beatae tempore.
+                    
+                    Sed assumenda quas hic rerum architecto qui consequuntur dignissimos. Qui totam mollitia est unde fuga aut itaque laborum aut itaque voluptatem? Aut quis iusto et saepe necessitatibus et numquam perspiciatis eos aliquid corporis id doloribus esse a consequatur velit et asperiores molestiae.</p>
+            </div>
+            <div class="about-col">
+                <img src="team.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- testimonials -->
+    <section class="testimonials">
+        <h1>Testimonials</h1>
+        <p>Lorem ipsum dolor sit amet. Et odio ullam est molestias enim ex sint alias qui explicabo enim At quae rerum.</p>
+
+        <div class="testimonial-row">
+            <div class="testimonial-col">
+                <img src="man.jpg" alt="">
+                <div>
+                    <p>Quo libero possimus et tempora assumenda aut distinctio sint qui fugit tempora est quis molestiae ut sequi nihil ea internos quia.<br>Est doloremque assumenda qui commodi dolores est error voluptatem id esse ducimus.</p>
+                    <h3>Jerick Paler</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-col">
+                <img src="man.jpg" alt="">
+                <div>
+                    <p>Quo libero possimus et tempora assumenda aut distinctio sint qui fugit tempora est quis molestiae ut sequi nihil ea internos quia.<br>Est doloremque assumenda qui commodi dolores est error voluptatem id esse ducimus.</p>
+                    <h3>Mark Olita</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="class-icon">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 | JR.Comp</p>
+        </div>
+    </section>
+
+    <!-- JS for Menu -->
+<script>
+
+var navLinks = document.getElementById("navLinks");
+var menuHidden = false;
+
+function showMenu() {
+  navLinks.style.right = "0";
+  menuHidden = false;
+}
+
+function hideMenu() {
+  navLinks.style.right = "-200px";
+  menuHidden = true;
+}
+
+function onScroll() {
+  if (window.innerWidth <= 600) {
+    if (!menuHidden && window.scrollY > 50) {
+      hideMenu();
+    } else if (menuHidden && window.scrollY <= 50) {
+      showMenu();
+    }
+  }
+}
+
+// Attach scroll event listener to the window object
+window.addEventListener("scroll", onScroll);
+
+</script>
+
+
+</body>
+</html>
